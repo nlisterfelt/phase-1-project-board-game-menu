@@ -7,52 +7,57 @@
     <body>
         <h1 id="main_title">Board Game Menu</h1>
         <hr class="horizontal-line"/>
-        <div id="new-game-form">
-            <h2>Add New Game</h2>
-            <form id="add-new-game">
-                <label for="input" >Enter game title:</label>
-                <input type="text" id="new_title" placeholder="Title" class="input-text" required/>
-                <br />
-                <label for="input">How many times have you played this?</label>
-                <input type="text" id="new_times_played" placeholder="0" class="input-text"/>
-                <br />
-                <label for="input">Image url:</label>
-                <input type="text" id="new_image" placeholder="https://..." class="input-text" required/>
-                <br />
-                <label for="input">Minimum players</label>
-                <input type="text" id="new_min_players" placeholder="2" class="input-text" required/>
-                <br />
-                <label for="input">Maximum players</label>
-                <input type="text" id="new_max_players" placeholder="4" class="input-text" required/>
-                <br />
-                <label for="input">Minimum runtime (in minutes)</label>
-                <input type="text" id="new_min_runtime" placeholder="30" class="input-text"/>
-                <br />
-                <label for="input">Maximum runtime (in minutes)</label>
-                <input type="text" id="new_max_runtime" placeholder="60" class="input-text"/>
-                <br />
-                <label for="input">Category</label>
-                <input type="text" id="new_category" placeholder="card drafting" class="input-text"/>
-                <br />
-                <label for="textarea">Comments about this game.</label>
-                <textarea id="new_comments"></textarea>
-                <br />
-                <input type="submit" value="Submit new game"/>
-                <br />
-            </form>
+
+        <div id="wrapper"><div id="more-info">
+                <img/>
+                <h2></h2>
+                <p title="players"></p>
+                <p title="runtime"></p>
+                <p title="times-played"></p>
+                <p title="category"></p>
+                <p title="comments"></p>
         </div>
-        <hr class="horizontal-line"/>
-        <div id="more-info">
-            <img/>
-            <h2></h2>
-            <p title="players"></p>
-            <p title="runtime"></p>
-            <p title="times-played"></p>
-            <p title="category"></p>
-            <p title="comments"></p>
-        </div>
-        <hr class="horizontal-line"/>
-        <div id="game-container"></div>
+        <div id="new-and-old">
+            <div id="new-game-form">
+                <h2>Add New Game</h2>
+                <form id="add-new-game">
+                    <label for="input" >Enter game title:</label>
+                    <input type="text" id="new_title" placeholder="Title" class="input-text" required/>
+                    <br />
+                    <label for="input">How many times have you played this?</label>
+                    <input type="text" id="new_times_played" placeholder="0" class="input-text"/>
+                    <br />
+                    <label for="input">Image url:</label>
+                    <input type="text" id="new_image" placeholder="https://..." class="input-text" required/>
+                    <br />
+                    <label for="input">Minimum players</label>
+                    <input type="text" id="new_min_players" placeholder="2" class="input-text" required/>
+                    <br />
+                    <label for="input">Maximum players</label>
+                    <input type="text" id="new_max_players" placeholder="4" class="input-text" required/>
+                    <br />
+                    <label for="input">Minimum runtime (in minutes)</label>
+                    <input type="text" id="new_min_runtime" placeholder="30" class="input-text"/>
+                    <br />
+                    <label for="input">Maximum runtime (in minutes)</label>
+                    <input type="text" id="new_max_runtime" placeholder="60" class="input-text"/>
+                    <br />
+                    <label for="input">Category</label>
+                    <input type="text" id="new_category" placeholder="card drafting" class="input-text"/>
+                    <br />
+                    <label for="textarea">Comments about this game.</label>
+                    <textarea id="new_comments"></textarea>
+                    <br />
+                    <input type="submit" value="Submit new game"/>
+                    <br />
+                </form>
+            </div>
+            <hr class="horizontal-line"/>       
+            <hr class="horizontal-line"/>
+            <div id="game-container"></div>
+        </div></div>
+        
+        </span>
         <script type="text/javascript" src="index.js"></script>
     </body>
 </html>

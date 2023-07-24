@@ -39,3 +39,14 @@
 #main_title {
     text-align: center;
 }
+
+#wrapper {
+    display: flex;
+}
+
+#more-info {
+    width: 33%;
+}
+#new-and-old {
+    width: 66%;
+}

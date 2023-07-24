@@ -1,0 +1,38 @@
+.horizontal-line {
+    height: 1px;
+    padding: 5px;
+    background-color: blueviolet;
+}
+
+#game-container {
+    margin: 20px auto;
+    width: 90%;
+    min-height: 100 px; 
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.game {
+    margin: 10px;
+}
+
+.small-image {
+    max-width: 175px;
+    max-height: 175px;
+}
+
+.small-game-info {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.small-title {
+    text-align: center;
+}
+
+.big-image{
+    max-width: 400px;
+    max-height: 400px;
+}
+

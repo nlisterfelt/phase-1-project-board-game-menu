@@ -1,0 +1,59 @@
+{
+    "games": [
+        {
+            "id": 1,
+            "name": "New York Zoo",
+            "image": "https://cf.geekdo-images.com/8vqr1uYik715mqDqy0W9vg__itemrep/img/BBieCOuPWtALlmYmUjNMQNNVUHw=/fit-in/246x300/filters:strip_icc()/pic5673404.jpg",
+            "players": [1, 2, 3, 4, 5],
+            "minTime": "30",
+            "maxTime": "60",
+            "timesPlayed": 5,
+            "category": "tile-laying",
+            "comments": ""
+        },
+        {
+            "id": 2,
+            "name": "Viticulture",
+            "image": "https://bgomedia-19127.kxcdn.com/image/product/source/GJqJlqzpqyf9yp2N444z",
+            "players": [2, 3, 4, 5, 6],
+            "minTime": "90",
+            "maxTime": "90",
+            "timesPlayed": 3,
+            "category": "",
+            "comments": "The game with grape tokens."
+        },
+        {
+            "id": 3,
+            "name": "Mystic Vale",
+            "image": "https://m.media-amazon.com/images/I/91MHD5Rl-TL.jpg",
+            "players": [2, 3, 4],
+            "minTime": "45",
+            "maxTime": "45",
+            "timesPlayed": 0,
+            "category": "",
+            "comments": ""
+        },
+        {
+            "id": 4,
+            "name": "Caverna",
+            "image": "https://cf.geekdo-images.com/rz22tqa5PCYvK9oDjIbvxg__itemrep/img/8tBInJIElBaiYVJ-gngzWmrSrsw=/fit-in/246x300/filters:strip_icc()/pic1790789.jpg",
+            "players": [1, 2, 3, 4, 5, 6, 7],
+            "minTime": "60",
+            "maxTime": "210",
+            "timesPlayed": 0,
+            "category": "",
+            "comments": ""
+        },
+        {
+            "id": 5,
+            "name": "Barenpark",
+            "image": "https://cf.geekdo-images.com/9JC16l1EMwmJkpbjaUBkpw__itemrep/img/W_7m_ai2jJKmjnQr24qT6hY0Hzo=/fit-in/246x300/filters:strip_icc()/pic3486218.jpg",
+            "players": [2, 3, 4],
+            "minTime": "30",
+            "maxTime": "45",
+            "timesPlayed": 1,
+            "category": "tile-laying",
+            "comments": ""
+        }
+    ]
+}

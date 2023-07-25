@@ -78,6 +78,7 @@ function postNewGame(gameInfo){
     .then(resp=>resp.json())
     .then(data=>{
         smallGame({id: data.id, ...gameInfo})
+        moreInfo(data.id)
         firstLetterFunc(gameInfo.name.charAt(0))
     })
 }

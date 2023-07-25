@@ -179,6 +179,66 @@
       "category": "",
       "comments": "",
       "id": 15
+    },
+    {
+      "name": "Castles of burgandy",
+      "image": "https://www.boardgamequest.com/wp-content/uploads/2013/01/Castles-of-Burgundy.jpg",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "minTime": "30",
+      "maxTime": "90",
+      "timesPlayed": 10,
+      "category": "",
+      "comments": "",
+      "id": 16
+    },
+    {
+      "name": "Burger up",
+      "image": "https://m.media-amazon.com/images/I/513I48l-ZML._AC_.jpg",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "minTime": "15",
+      "maxTime": "30",
+      "timesPlayed": 6,
+      "category": "",
+      "comments": "build burgers",
+      "id": 17
+    },
+    {
+      "name": "Meadow",
+      "image": "https://cf.geekdo-images.com/mQ0njGAc86YA8VRjCy49rg__itemrep/img/yUh1riCy86jhwKA8uWJTxjzO0bk=/fit-in/246x300/filters:strip_icc()/pic5516555.jpg",
+      "minPlayers": "1",
+      "maxPlayers": "5",
+      "minTime": "30",
+      "maxTime": "100",
+      "timesPlayed": 8,
+      "category": "2",
+      "comments": "3",
+      "id": 18
+    },
+    {
+      "name": "Lizard wizard",
+      "image": "https://cf.geekdo-images.com/hgUDu_oG0uhnOWX4WM2vXA__itemrep/img/SivDMfaXNoRtSzwR-Ln1WuBXv-w=/fit-in/246x300/filters:strip_icc()/pic4070329.jpg",
+      "minPlayers": "2",
+      "maxPlayers": "5",
+      "minTime": "9",
+      "maxTime": "6",
+      "timesPlayed": 3,
+      "category": "d",
+      "comments": "d",
+      "id": 19
+    },
+    {
+      "name": "Lizard wizard",
+      "image": "https://cdn.shoplightspeed.com/shops/628174/files/25144345/1652x1652x2/forbidden-games-lizard-wizard.jpg",
+      "minPlayers": "8",
+      "maxPlayers": "9",
+      "minTime": "50",
+      "maxTime": "60",
+      "timesPlayed": 6,
+      "category": "h",
+      "comments": "j",
+      "id": 20
     }
   ]
 }

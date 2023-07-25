@@ -132,9 +132,15 @@ function filterFunc(letter){
     gameContainer.innerText = ''
     fetch('http://localhost:3000/games')
     .then(resp=>resp.json())
-    .then(data=>data.forEach(game=>{
-        if(game.name.charAt(0)===letter){
-            smallGame(game)
+    .then(data=>{
+        if(letter==='All games'){
+            data.forEach(game=>smallGame(game))
+        } else {
+            data.forEach(game=>{
+                if(game.name.charAt(0)===letter){
+                    smallGame(game)
+                }
+            })
         }
-    }))
+    })
 }

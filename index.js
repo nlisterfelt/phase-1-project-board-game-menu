@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     filter.addEventListener('change', e=>{
         e.preventDefault()
-        filterFunc(document.getElementById('game-id').innerText)
+        filterFunc(e.target.value)
     })
 
     playedButton.addEventListener('click', e=>{
@@ -115,8 +115,8 @@ function timesPlayedFunc(input){
 }
 function firstLetterFunc(letter){
     const filterContainer = document.getElementById('filter')
-    if(firstLetters.includes(letter)===false){
-        firstLetters.push(letter)
+    if(firstLetters.includes(letter.toUpperCase())===false){
+        firstLetters.push(letter.toUpperCase())
         firstLetters.sort()
         document.getElementById('filter').innerText = ''
 
@@ -124,6 +124,7 @@ function firstLetterFunc(letter){
         allGamesOption.id = 'all-games-filter'
         allGamesOption.innerText = 'All games'
         filterContainer.appendChild(allGamesOption)
+
         firstLetters.forEach(possibleLetter => {
             const letterOption = document.createElement('option')
             letterOption.id = `${possibleLetter}-filter`
@@ -142,7 +143,7 @@ function filterFunc(letter){
             data.forEach(game=>smallGame(game))
         } else {
             data.forEach(game=>{
-                if(game.name.charAt(0)===letter){
+                if(game.name.charAt(0).toUpperCase()===letter){
                     smallGame(game)
                 }
             })

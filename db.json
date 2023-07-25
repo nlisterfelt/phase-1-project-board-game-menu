@@ -32,7 +32,7 @@
       "maxPlayers": 4,
       "minTime": 45,
       "maxTime": 45,
-      "timesPlayed": 4,
+      "timesPlayed": 7,
       "category": "",
       "comments": ""
     },
@@ -67,7 +67,7 @@
       "maxPlayers": "6",
       "minTime": "90",
       "maxTime": "120",
-      "timesPlayed": 0,
+      "timesPlayed": 3,
       "category": "set collection",
       "comments": "",
       "id": 6
@@ -151,7 +151,7 @@
       "maxPlayers": "4",
       "minTime": "120",
       "maxTime": "120",
-      "timesPlayed": 0,
+      "timesPlayed": 3,
       "category": "",
       "comments": "",
       "id": 13
@@ -239,6 +239,54 @@
       "category": "h",
       "comments": "j",
       "id": 20
+    },
+    {
+      "name": "Lizard wizard",
+      "image": "https://cdn.shoplightspeed.com/shops/628174/files/25144345/1652x1652x2/forbidden-games-lizard-wizard.jpg",
+      "minPlayers": "1",
+      "maxPlayers": "10",
+      "minTime": "20",
+      "maxTime": "50",
+      "timesPlayed": 29,
+      "category": "d",
+      "comments": "r",
+      "id": 21
+    },
+    {
+      "name": "meadow",
+      "image": "https://www.boardgamebliss.com/cdn/shop/products/pic5894745_grande.jpg?v=1615576697",
+      "minPlayers": "1",
+      "maxPlayers": "4",
+      "minTime": "20",
+      "maxTime": "25",
+      "timesPlayed": 33,
+      "category": "",
+      "comments": "",
+      "id": 22
+    },
+    {
+      "name": "twilight",
+      "image": "https://cf.geekdo-images.com/mQ0njGAc86YA8VRjCy49rg__itemrep/img/yUh1riCy86jhwKA8uWJTxjzO0bk=/fit-in/246x300/filters:strip_icc()/pic5516555.jpg",
+      "minPlayers": "5",
+      "maxPlayers": "9",
+      "minTime": "10",
+      "maxTime": "12",
+      "timesPlayed": 8,
+      "category": "5",
+      "comments": "d",
+      "id": 23
+    },
+    {
+      "name": "yokohama",
+      "image": "https://www.boardgamebliss.com/cdn/shop/products/pic5894745_grande.jpg?v=1615576697",
+      "minPlayers": "3",
+      "maxPlayers": "5",
+      "minTime": "41",
+      "maxTime": "68",
+      "timesPlayed": 5,
+      "category": "f",
+      "comments": "g",
+      "id": 24
     }
   ]
 }

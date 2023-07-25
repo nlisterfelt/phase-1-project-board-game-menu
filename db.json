@@ -119,6 +119,18 @@
       "category": "tile laying",
       "comments": "",
       "id": 10
+    },
+    {
+      "name": "Photosynthesis",
+      "image": "https://www.boardgamequest.com/wp-content/uploads/2017/09/Photosynthesis.jpg",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "minTime": "30",
+      "maxTime": "60",
+      "timesPlayed": 0,
+      "category": "",
+      "comments": "",
+      "id": 11
     }
   ]
 }

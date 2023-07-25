@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         newForm.reset()
     })
 
-    filter.addEventListener('select', e=>{
+    filter.addEventListener('change', e=>{
         e.preventDefault()
         filterFunc(e.target.value)
     })

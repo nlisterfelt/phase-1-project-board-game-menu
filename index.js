@@ -1,5 +1,6 @@
 const firstLetters = []
 const gameContainer = document.getElementById('game-container')
+const playedButton = document.getElementById('played-btn')
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const newForm = document.getElementById('add-new-game')
@@ -35,6 +36,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     filter.addEventListener('change', e=>{
         e.preventDefault()
         filterFunc(e.target.value)
+    })
+
+    playedButton.addEventListener('click', e=>{
+        e.preventDefault()
+        playedIncrease(e.target.parentNode)
     })
 })
 
@@ -143,4 +149,8 @@ function filterFunc(letter){
             })
         }
     })
+}
+
+function playedIncrease(gameInfo){
+    console.log(gameInfo)
 }

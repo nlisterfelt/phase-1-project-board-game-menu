@@ -112,9 +112,18 @@ function firstLetterFunc(letter){
     if(firstLetters.includes(letter)===false){
         firstLetters.push(letter)
         firstLetters.sort()
-        const letterOption = filterContainer.createElement('option')
-        letterOption.id = `letter-${letter}`
-        letterOption.innerText = letter
+        document.getElementById('filter').innerText = ''
+
+        const allGamesOption = document.createElement('option')
+        allGamesOption.id = 'all-games-filter'
+        allGamesOption.innerText = 'All games'
+        filterContainer.appendChild(allGamesOption)
+        firstLetters.forEach(possibleLetter => {
+            const letterOption = document.createElement('option')
+            letterOption.id = `${possibleLetter}-filter`
+            letterOption.innerText = possibleLetter
+            filterContainer.appendChild(letterOption)
+        })
     }
 }
 

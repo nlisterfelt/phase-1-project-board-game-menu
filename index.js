@@ -1,4 +1,5 @@
 const firstLetters = []
+const gameContainer = document.getElementById('game-container')
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const newForm = document.getElementById('add-new-game')
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 function smallGame(gameInfo){
-    const gameContainer = document.getElementById('game-container')
+
     const div = document.createElement('div')
     div.id = gameInfo.id
     div.className = 'small-game-info'
@@ -127,6 +128,13 @@ function firstLetterFunc(letter){
     }
 }
 
-function filterFunc(selection){
-    console.log(selection)
+function filterFunc(letter){
+    gameContainer.innerText = ''
+    fetch('http://localhost:3000/games')
+    .then(resp=>resp.json())
+    .then(data=>data.forEach(game=>{
+        if(game.name.charAt(0)===letter){
+            smallGame(game)
+        }
+    }))
 }

@@ -155,6 +155,18 @@
       "category": "",
       "comments": "",
       "id": 13
+    },
+    {
+      "name": "Ark nova",
+      "image": "https://cf.geekdo-images.com/SoU8p28Sk1s8MSvoM4N8pQ__itemrep/img/IRqrT7kOqPQilogauyQkOnLx-HU=/fit-in/246x300/filters:strip_icc()/pic6293412.jpg",
+      "minPlayers": "1",
+      "maxPlayers": "4",
+      "minTime": "90",
+      "maxTime": "150",
+      "timesPlayed": 0,
+      "category": "",
+      "comments": "",
+      "id": 14
     }
   ]
 }

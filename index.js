@@ -93,20 +93,14 @@ function moreInfo(id){
         image.title = data.name
         image.className = 'big-image'
 
-        const name = moreInfoContainer.querySelector('h2')
-        name.innerText = data.name
-        const gameID = document.getElementById('game-id')
-        gameID.innerText = data.id
-        const players = moreInfoContainer.querySelector('p[title=players]')
-        players.innerText = `${data.minPlayers} - ${data.maxPlayers} players`
-        const runtime = moreInfoContainer.querySelector('p[title=runtime]')
-        runtime.innerText = `${data.minTime} - ${data.maxTime} minutes`
+        moreInfoContainer.querySelector('h2').innerText = data.name
+        document.getElementById('game-id').innerText = data.id
+        moreInfoContainer.querySelector('p[title=players]').innerText = `${data.minPlayers} - ${data.maxPlayers} players`
+        moreInfoContainer.querySelector('p[title=runtime]').innerText = `${data.minTime} - ${data.maxTime} minutes`
         bigTimesPlayed.innerText = `Times played: ${data.timesPlayed}`
         bigTimesPlayed.value = data.timesPlayed
-        const category = moreInfoContainer.querySelector('p[title=category]')
-        category.innerText = `Category: ${data.category}`
-        const comments = moreInfoContainer.querySelector('p[title=comments]')
-        comments.innerText = data.comments
+        moreInfoContainer.querySelector('p[title=category]').innerText = `Category: ${data.category}`
+        moreInfoContainer.querySelector('p[title=comments]').innerText = data.comments
     })
 }
 

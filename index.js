@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     filter.addEventListener('change', e=>{
         e.preventDefault()
-        filterFunc(e.target.value)
+        filterFunc(document.getElementById('game-id').innerText)
     })
 
     playedButton.addEventListener('click', e=>{
         e.preventDefault()
-        playedIncrease(e.target.parentNode)
+        playedIncrease(document.getElementById('game-id').innerText)
     })
 })
 
@@ -94,6 +94,8 @@ function moreInfo(id){
 
         const name = moreInfoContainer.querySelector('h2')
         name.innerText = data.name
+        const gameID = document.getElementById('game-id')
+        gameID.innerText = data.id
         const players = moreInfoContainer.querySelector('p[title=players]')
         players.innerText = `${data.minPlayers} - ${data.maxPlayers} players`
         const runtime = moreInfoContainer.querySelector('p[title=runtime]')
@@ -151,6 +153,20 @@ function filterFunc(letter){
     })
 }
 
-function playedIncrease(gameInfo){
-    console.log(gameInfo)
+function playedIncrease(playedID){
+    
+    fetch(`http://localhost:3000/games/${playedID}`,{
+        method: 'PATCH',
+        headers: {
+            'content-type': 'application/json',
+            Accept: 'application/json'
+        },
+        body: JSON.stringify({
+            timesPlayed: 2
+        })
+    })
+    .then(resp=>resp.json())
+    .then(data=>{
+        console.log(data)
+    })
 }

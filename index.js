@@ -1,9 +1,15 @@
+const firstLetters = []
+
 document.addEventListener('DOMContentLoaded', ()=>{
     const newForm = document.getElementById('add-new-game')
+    const filter = document.getElementById('filter')
 
     fetch('http://localhost:3000/games')
     .then(resp=>resp.json())
-    .then(data=>data.forEach(game=>smallGame(game)))
+    .then(data=>data.forEach(game=>{
+        
+        smallGame(game)
+    }))
 
     moreInfo(1)
 
@@ -23,6 +29,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
         postNewGame(game)
         newForm.reset()
+    })
+
+    filter.addEventListener('select', e=>{
+        e.preventDefault()
+        console.log(e.target)
     })
 })
 

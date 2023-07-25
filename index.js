@@ -95,13 +95,11 @@ function moreInfo(id){
 
         const name = moreInfoContainer.querySelector('h2')
         name.innerText = data.name
-        const gameID = document.getElementById('game-id')
-        gameID.innerText = data.id
-        const players = moreInfoContainer.querySelector('p[title=players]')
-        players.innerText = `${data.minPlayers} - ${data.maxPlayers} players`
+        document.getElementById('game-id').innerText = data.id
+        moreInfoContainer.querySelector('p[title=players]').innerText = `${data.minPlayers} - ${data.maxPlayers} players`
         const runtime = moreInfoContainer.querySelector('p[title=runtime]')
         runtime.innerText = `${data.minTime} - ${data.maxTime} minutes`
-        const timesPlayed = bigTimesPlayed
+        const timesPlayed = data.timesPlayed
         timesPlayed.innerText = `Times played: ${data.timesPlayed}`
         timesPlayed.value = data.timesPlayed
         const category = moreInfoContainer.querySelector('p[title=category]')

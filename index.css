@@ -27,17 +27,9 @@
     padding-bottom: 20px;
 }
 
-.small-title {
-    text-align: center;
-}
-
 .big-image{
     max-width: 400px;
     max-height: 400px;
-}
-
-#main_title {
-    text-align: center;
 }
 
 #wrapper {
@@ -46,7 +38,11 @@
 
 #more-info {
     width: 33%;
+    padding-top: 20px;
 }
 #new-and-old {
     width: 66%;
+}
+.center {
+    text-align: center;
 }

@@ -1,6 +1,7 @@
 const firstLetters = []
 const gameContainer = document.getElementById('game-container')
 const playedButton = document.getElementById('played-btn')
+const bigTimesPlayed = document.querySelector('p[title=times-played]')
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const newForm = document.getElementById('add-new-game')
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     newForm.addEventListener('submit', e=>{
         e.preventDefault()
-        const played = timesPlayed(e.target.new_times_played.value)
+        const played = timesPlayedFunc(e.target.new_times_played.value)
         const game = {
             "name": e.target.new_title.value,
             "image": e.target.new_image.value,
@@ -100,8 +101,9 @@ function moreInfo(id){
         players.innerText = `${data.minPlayers} - ${data.maxPlayers} players`
         const runtime = moreInfoContainer.querySelector('p[title=runtime]')
         runtime.innerText = `${data.minTime} - ${data.maxTime} minutes`
-        const timesPlayed = moreInfoContainer.querySelector('p[title=times-played]')
+        const timesPlayed = bigTimesPlayed
         timesPlayed.innerText = `Times played: ${data.timesPlayed}`
+        timesPlayed.value = data.timesPlayed
         const category = moreInfoContainer.querySelector('p[title=category]')
         category.innerText = `Category: ${data.category}`
         const comments = moreInfoContainer.querySelector('p[title=comments]')
@@ -109,7 +111,7 @@ function moreInfo(id){
     })
 }
 
-function timesPlayed(input){
+function timesPlayedFunc(input){
     if(typeof(input)==='number'&&input>0){
         return input
     } else {
@@ -154,7 +156,7 @@ function filterFunc(letter){
 }
 
 function playedIncrease(playedID){
-    
+    const newTimesPlayed = bigTimesPlayed.value+1
     fetch(`http://localhost:3000/games/${playedID}`,{
         method: 'PATCH',
         headers: {
@@ -162,11 +164,11 @@ function playedIncrease(playedID){
             Accept: 'application/json'
         },
         body: JSON.stringify({
-            timesPlayed: 2
+            timesPlayed: newTimesPlayed
         })
     })
     .then(resp=>resp.json())
     .then(data=>{
-        console.log(data)
+        moreInfo(playedID)
     })
 }

@@ -8,7 +8,7 @@
       "maxPlayers": 5,
       "minTime": 30,
       "maxTime": 60,
-      "timesPlayed": 2,
+      "timesPlayed": 5,
       "category": "tile-laying",
       "comments": ""
     },
@@ -20,7 +20,7 @@
       "maxPlayers": 6,
       "minTime": 90,
       "maxTime": 90,
-      "timesPlayed": 3,
+      "timesPlayed": 2,
       "category": "",
       "comments": "The game with grape tokens."
     },
@@ -32,7 +32,7 @@
       "maxPlayers": 4,
       "minTime": 45,
       "maxTime": 45,
-      "timesPlayed": 0,
+      "timesPlayed": 4,
       "category": "",
       "comments": ""
     },
@@ -127,7 +127,7 @@
       "maxPlayers": "4",
       "minTime": "30",
       "maxTime": "60",
-      "timesPlayed": 0,
+      "timesPlayed": 6,
       "category": "",
       "comments": "",
       "id": 11

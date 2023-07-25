@@ -105,8 +105,9 @@ function moreInfo(id){
 }
 
 function timesPlayedFunc(input){
-    if(typeof(input)==='number'&&input>0){
-        return input
+    const inputNumber = parseInt(input)
+    if(typeof(inputNumber)==='number'&&inputNumber>0){
+        return inputNumber
     } else {
         return 0
     }

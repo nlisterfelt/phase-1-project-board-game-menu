@@ -8,7 +8,7 @@
       "maxPlayers": 5,
       "minTime": 30,
       "maxTime": 60,
-      "timesPlayed": 6,
+      "timesPlayed": 8,
       "category": "tile-laying",
       "comments": ""
     },
@@ -167,6 +167,18 @@
       "category": "",
       "comments": "",
       "id": 14
+    },
+    {
+      "name": "Altiplano",
+      "image": "https://cf.geekdo-images.com/hgUDu_oG0uhnOWX4WM2vXA__itemrep/img/SivDMfaXNoRtSzwR-Ln1WuBXv-w=/fit-in/246x300/filters:strip_icc()/pic4070329.jpg",
+      "minPlayers": "2",
+      "maxPlayers": "5",
+      "minTime": "60",
+      "maxTime": "120",
+      "timesPlayed": 6,
+      "category": "",
+      "comments": "",
+      "id": 15
     }
   ]
 }

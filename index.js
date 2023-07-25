@@ -3,30 +3,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     fetch('http://localhost:3000/games')
     .then(resp=>resp.json())
-    .then(data=>data.forEach(game=>addGame(game)))
+    .then(data=>data.forEach(game=>smallGame(game)))
 
     moreInfo(1)
 
     newForm.addEventListener('submit', e=>{
         e.preventDefault()
-        const playersArr = playersArray(e.target.new_min_players.value,e.target.new_max_players.value)
         const played = timesPlayed(e.target.new_times_played.value)
         const game = {
             "name": e.target.new_title.value,
             "image": e.target.new_image.value,
-            "players": playersArr,
+            "minPlayers": e.target.new_min_players.value,
+            "maxPlayers": e.target.new_max_players.value,
             "minTime": e.target.new_min_runtime.value,
             "maxTime": e.target.new_max_runtime.value,
             "timesPlayed": played,
             "category": e.target.new_category.value,
             "comments": e.target.new_comments.value
         }
-        moreInfo(game)
-        addGame(game)
+        postNewGame(game)
+        newForm.reset()
     })
 })
 
-function addGame(gameInfo){
+function smallGame(gameInfo){
     const gameContainer = document.getElementById('game-container')
     const div = document.createElement('div')
     div.id = gameInfo.id
@@ -47,26 +47,17 @@ function addGame(gameInfo){
     })
 }
 
-function addNewGame(gameInfo){
-    const playersArray = []
-    const played = timesPlayed(e.target.new_times_played.value)
+function postNewGame(gameInfo){
     fetch('http://localhost:3000/games',{
         method: 'POST',
         headers: {
             'content-type': 'application/json',
             Accept: 'application/json'
         },
-        body: JSON.stringify({
-            "name": gameInfo.name,
-            "image": gameInfo.image,
-            "players": playersArray,
-            "minTime": gameInfo.minTime,
-            "maxTime": gameInfo.maxTime,
-            "timesPlayed": played,
-            "category": gameInfo.category,
-            "comments": gameInfo.comments
-        })
+        body: JSON.stringify(gameInfo)
     })
+    .then(resp=>resp.json())
+    .then(data=>{smallGame({id: data.id, ...gameInfo})})
 }
 
 function moreInfo(id){
@@ -83,7 +74,7 @@ function moreInfo(id){
         const name = moreInfoContainer.querySelector('h2')
         name.innerText = data.name
         const players = moreInfoContainer.querySelector('p[title=players]')
-        players.innerText = `${data.players[0]} - ${data.players[data.players.length-1]} players`
+        players.innerText = `${data.minPlayers} - ${data.maxPlayers} players`
         const runtime = moreInfoContainer.querySelector('p[title=runtime]')
         runtime.innerText = `${data.minTime} - ${data.maxTime} minutes`
         const timesPlayed = moreInfoContainer.querySelector('p[title=times-played]')
@@ -94,15 +85,9 @@ function moreInfo(id){
         comments.innerText = data.comments
     })
 }
-function playersArray(min, max){
-    const playersArr = []
-    for(let i=parseInt(min); i<=max; i++){
-        playersArr.push(i)
-    }
-    return playersArr
-}
+
 function timesPlayed(input){
-    if(typeof(input)==='number'&&input>=0){
+    if(typeof(input)==='number'&&input>0){
         return input
     } else {
         return 0

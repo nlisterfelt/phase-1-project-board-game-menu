@@ -1,4 +1,5 @@
 const firstLetters = []
+
 document.addEventListener('DOMContentLoaded', ()=>{
     const newForm = document.getElementById('add-new-game')
     const filter = document.getElementById('filter')
@@ -67,7 +68,10 @@ function postNewGame(gameInfo){
         body: JSON.stringify(gameInfo)
     })
     .then(resp=>resp.json())
-    .then(data=>{smallGame({id: data.id, ...gameInfo})})
+    .then(data=>{
+        smallGame({id: data.id, ...gameInfo})
+        firstLetterFunc(gameInfo.name.charAt(0))
+    })
 }
 
 function moreInfo(id){
@@ -104,11 +108,14 @@ function timesPlayed(input){
     }
 }
 function firstLetterFunc(letter){
+    const filterContainer = document.getElementById('filter')
     if(firstLetters.includes(letter)===false){
         firstLetters.push(letter)
         firstLetters.sort()
+        const letterOption = filterContainer.createElement('option')
+        letterOption.id = `letter-${letter}`
+        letterOption.innerText = letter
     }
-
 }
 
 function filterFunc(selection){

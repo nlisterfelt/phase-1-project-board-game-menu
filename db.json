@@ -8,7 +8,7 @@
       "maxPlayers": 5,
       "minTime": 30,
       "maxTime": 60,
-      "timesPlayed": 8,
+      "timesPlayed": 11,
       "category": "tile-laying",
       "comments": ""
     },
@@ -20,7 +20,7 @@
       "maxPlayers": 6,
       "minTime": 90,
       "maxTime": 90,
-      "timesPlayed": 2,
+      "timesPlayed": 4,
       "category": "",
       "comments": "The game with grape tokens."
     },
@@ -44,7 +44,7 @@
       "maxPlayers": 7,
       "minTime": 60,
       "maxTime": 210,
-      "timesPlayed": 0,
+      "timesPlayed": 3,
       "category": "",
       "comments": ""
     },
@@ -119,6 +119,18 @@
       "category": "tile laying",
       "comments": "",
       "id": 10
+    },
+    {
+      "name": "Isle of cats",
+      "image": "https://cf.geekdo-images.com/AuAheDzhkLufiZFE9JaRNA__itemrep/img/UTvJuevXkKm8HYOJYtUms_7iC2I=/fit-in/246x300/filters:strip_icc()/pic4781085.jpg",
+      "minPlayers": "1",
+      "maxPlayers": "4",
+      "minTime": "60",
+      "maxTime": "90",
+      "timesPlayed": 1,
+      "category": "tile laying",
+      "comments": "",
+      "id": 11
     }
   ]
 }

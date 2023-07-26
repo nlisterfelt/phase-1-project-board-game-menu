@@ -26,6 +26,10 @@ This is where a new game can be added to the list. The user is required to enter
 
 ![new game gif canva](./gifs/new_game.gif)
 
+## Full Video Walkthrough
+
+
+
 ### Images used
 
 This app starts with 10 games and one gif uses an 11th game. The urls are included below.
